@@ -209,7 +209,7 @@ public class TurtleGrafik extends JFrame {
 
 	private void aufg6() {
 		// Aufgabe 6
-		int laenge = 5;
+		double laenge = 15;
 		for (int i = 0; i < 64; i++) {
 			t.vor(laenge);
 			t.drehen(-90);
@@ -217,29 +217,86 @@ public class TurtleGrafik extends JFrame {
 		}
 	}
 
+	private void quadrat(double seitenlaenge){
+		t.vor(seitenlaenge);
+		t.drehen(90);
+		t.vor(seitenlaenge);
+		t.drehen(90);
+		t.vor(seitenlaenge);
+		t.drehen(90);
+		t.vor(seitenlaenge);
+		t.drehen(90);
+	}
+	
 	private void aufg7() {
 		// Aufgabe 7
-
+		double seite = 4.0; 
+		for (int i = 0; i < 22; i++)  {
+			quadrat(seite);
+			seite = seite + seite/4;
+			
+		}
 	}
-
+	private void sechseck(double seitenlaenge) {
+		for (int i = 0; i < 6; i++) {
+			t.vor(seitenlaenge);
+			t.drehen(360/6);
+		}
+	
+	}
 	private void aufg8() {
 		// Aufgabe 8
-
+		double seite = 100;
+		for (int i= 0; i < 18; i++){
+			sechseck(seite);
+			t.drehen(360/18);
+		}
+	
 	}
 
+	private void dreieck(){
+		for (int i = 0; i < 3; i++) {
+			t.vor(100);
+			t.drehen(360/3);
+		}
+	}
 	private void aufg9() {
 		// Aufgabe 9
-
+		for (int i = 0; i < 6; i++) {
+			dreieck();
+			t.drehen(360/6);
+		}
 	}
-
+	private void drei(){
+		for (int i = 0; i < 3; i++) {
+			t.vor(100);
+			t.drehen(360/3);
+		
+		}
+		}
 	private void aufg10() {
 		// Aufgabe 10
-
+		t.drehen(60);
+		for (int i = 0; i < 4; i++){
+		drei();
+		t.drehen(360/4);
+		}
 	}
-
+	private void flei(){
+		for (int i = 0; i < 3; i++) {
+			t.vor(100);
+			t.drehen(360/3);
+		}
+	}
 	private void aufg11() {
 		// Aufgabe 11
-
+		
+		for (int i = 0; i < 6; i++) {
+			flei();
+			t.drehen(-360/-6);
+			
+		}
+	
 	}
 
 	/**
