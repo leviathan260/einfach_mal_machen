@@ -284,20 +284,24 @@ public class TurtleGrafik extends JFrame {
 	}
 	private void flei(){
 		for (int i = 0; i < 3; i++) {
-			t.vor(100);
-			t.drehen(360/3);
+            t.vor(100);
+			t.drehen(-360/3);
+			
 		}
 	}
 	private void aufg11() {
 		// Aufgabe 11
-		
+		double seite = 100;
+		sechseck(seite);
 		for (int i = 0; i < 6; i++) {
-			flei();
-			t.drehen(-360/-6);
-			
-		}
-	
+			t.drehen(-60);
+			t.vor(100);
+			t.drehen(-240);
+			t.vor(100);
+	    }
 	}
+	
+	
 
 	/**
 	 * Launch the application.
