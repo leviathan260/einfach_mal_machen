@@ -2,6 +2,7 @@ package dialog;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
@@ -98,11 +99,28 @@ public class Dialoge extends JFrame {
 		btnAufg8.setBounds(12, 271, 320, 25);
 		contentPane.add(btnAufg8);
 	}
-
+	public boolean zwischen1und100(int zahl) {
+		if (zahl > 0 && zahl < 100){
+			return true;
+	  } else {
+		    return false;
+		}
+	}
 	private void aufg1() {
 		// Aufgabe 1
-		
-	}
+		String eingabe;
+		int zahl;
+		eingabe = JOptionPane.showInputDialog("gib mir was");
+		zahl = Integer.parseInt(eingabe);
+				
+		if (zwischen1und100(zahl) == true) {
+			JOptionPane.showMessageDialog(this, "stimmt");
+		}else{
+			JOptionPane.showMessageDialog(this, "DU DUMMER SPAST");
+		}
+			
+			
+		}
 	
 	private void aufg2() {
 		// Aufgabe 2
